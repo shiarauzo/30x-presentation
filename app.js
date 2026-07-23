@@ -37,8 +37,8 @@ const scenes = [
   },
   {
     label: "Miro",
-    beats: 4,
-    content: () => `<div class="content"><p class="kicker">MAPA DE OPORTUNIDADES</p><h2>Resolver rápido no es diseñar mejor.</h2><p class="lead">Este es el tablero para abrir la charla en Miro. Cada rama es una oportunidad de diseño, no una solución cerrada.</p><div class="miro"><div class="branch-line line-one"></div><div class="branch-line line-two"></div><div class="branch-line line-three"></div><div class="branch-line line-four"></div><div class="core reveal" data-reveal="0">Resolver rápido<br/>no es diseñar mejor</div><article class="branch credit reveal" data-reveal="1"><strong>Crédito</strong><span>Momento, aspiración y lenguaje de la decisión.</span></article><article class="branch insurance reveal" data-reveal="2"><strong>Seguros</strong><span>Claridad, comparación y una elección que se siente propia.</span></article><article class="branch housing reveal" data-reveal="3"><strong>Vivienda</strong><span>Señales de intención antes de pedir esfuerzo.</span></article><article class="branch inventory reveal" data-reveal="4"><strong>Inventario</strong><span>Ritmo, entorno y feedback al registrar.</span></article></div></div>`,
+    beats: 3,
+    content: () => `<div class="content"><p class="kicker">MAPA DE OPORTUNIDADES</p><h2>Resolver rápido no es diseñar mejor.</h2><p class="lead">Abrimos con cuatro oportunidades de diseño. Cada card parte de un momento distinto, no de una solución cerrada.</p><div class="opportunity-grid"><article class="opportunity-card reveal" data-reveal="0"><span>01</span><h3>Crédito</h3><p>Momento, aspiración y lenguaje de la decisión.</p></article><article class="opportunity-card reveal" data-reveal="1"><span>02</span><h3>Seguros</h3><p>Claridad, comparación y una elección que se siente propia.</p></article><article class="opportunity-card reveal" data-reveal="2"><span>03</span><h3>Vivienda</h3><p>Señales de intención antes de pedir esfuerzo.</p></article><article class="opportunity-card reveal" data-reveal="3"><span>04</span><h3>Inventario</h3><p>Ritmo, entorno y feedback al registrar.</p></article></div></div>`,
   },
   {
     label: "Persona",

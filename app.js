@@ -150,7 +150,7 @@ function wireInteractions() {
 
 function render() {
   const scene = scenes[sceneIndex];
-  deck.innerHTML = `<section class="scene" data-beat="${beat}" aria-roledescription="escena" aria-label="${scene.label}"><header class="chrome"><span>Des IA izar</span><span class="stage">${String(sceneIndex + 1).padStart(2, "0")} · ${String(beat + 1).padStart(2, "0")}</span></header>${scene.content()}<footer class="footer"><span><strong>Persona</strong> · <strong>Postura</strong> · <strong>Precisión</strong></span><span>${scene.label}</span></footer></section>`;
+  deck.innerHTML = `<section class="scene" data-beat="${beat}" aria-roledescription="escena" aria-label="${scene.label}"><header class="chrome"><span>Des IA izar</span><span class="stage">${String(sceneIndex + 1).padStart(2, "0")} · ${String(beat + 1).padStart(2, "0")}</span></header>${scene.content()}</section>`;
   wireInteractions();
 }
 

@@ -15,11 +15,11 @@ button { cursor: pointer; }
   min-height: 100dvh;
   padding: 52px 76px 38px;
   display: grid;
-  grid-template-rows: 28px 1fr 30px;
+  grid-template-rows: 28px 1fr;
   gap: 28px;
 }
 
-.chrome, .footer {
+.chrome {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,8 +28,6 @@ button { cursor: pointer; }
   line-height: 1;
 }
 
-.footer { border-top: 1px solid #2a2c30; padding-top: 18px; }
-.footer strong { color: #f5f2ed; font-weight: 500; }
 .stage { color: #5eaaff; font-variant-numeric: tabular-nums; }
 
 .content { width: min(100%, 1240px); align-self: center; justify-self: center; }

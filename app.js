@@ -38,7 +38,7 @@ function creditoCard(level) {
   } else if (level === 1) {
     stack = `${kicker}<h3 class="demo-title">Mira si esta cuota cabe en tu próximo paso</h3><p class="moment" style="margin-top:10px">Antes de decidir una compra.</p>`;
   } else {
-    stack = `${kicker}<p class="num">$ 240.000 <small>/mes · 24 meses</small></p><p style="color:var(--ink);font-size:16px;margin:2px 0 0;line-height:1.3">Mira si esta cuota cabe en tu próximo paso</p><p class="moment" style="margin-top:6px">Antes de decidir una compra.</p>`;
+    stack = `${kicker}<p class="num">$&nbsp;240.000 <small>/mes · 24&nbsp;meses</small></p><p style="color:var(--ink);font-size:16px;margin:2px 0 0;line-height:1.3">Mira si esta cuota cabe en tu próximo paso</p><p class="moment" style="margin-top:6px">Antes de decidir una compra.</p>`;
   }
   let action;
   if (level === 0) action = `<span style="color:#6f6f76;font-size:14px">Solicitar ahora ›</span>`;
@@ -91,7 +91,7 @@ const scenes = [
   {
     label: "Precisión",
     beats: 3,
-    content: () => `<div class="content split"><div class="copy-stack"><p class="kicker reveal" data-reveal="0">PRECISIÓN</p><h2 class="reveal" data-reveal="0">El carácter está en el detalle.</h2><p class="reveal" data-reveal="1">16 px para leer. 44 px para tocar.</p><p class="reveal" data-reveal="2">Menos de 200 ms para responder.</p><h2 class="display-serif reveal" data-reveal="3">Menos. Mejor.</h2></div><aside class="rule reveal" data-reveal="2"><span class="number">4</span><h3>contenido · jerarquía · espacio · movimiento</h3></aside></div>`,
+    content: () => `<div class="content split"><div class="copy-stack"><p class="kicker reveal" data-reveal="0">PRECISIÓN</p><h2 class="reveal" data-reveal="0">El carácter está en el detalle.</h2><p class="reveal" data-reveal="1">16&nbsp;px para leer. 44&nbsp;px para tocar.</p><p class="reveal" data-reveal="2">Menos de 200&nbsp;ms para responder.</p><h2 class="display-serif reveal" data-reveal="3">Menos. Mejor.</h2></div><aside class="rule reveal" data-reveal="2"><span class="number">4</span><h3>contenido · jerarquía · espacio · movimiento</h3></aside></div>`,
   },
   {
     label: "Transformar",
@@ -107,7 +107,7 @@ const scenes = [
   {
     label: "Estados",
     beats: 1,
-    content: () => `<div class="content"><p class="kicker">CONTENIDO ANTES QUE ESTÉTICA</p><h2 class="reveal" data-reveal="0">La IA maqueta el happy path. El producto vive en sus estados.</h2><div class="states-grid"><article class="state-card"><span class="tag">Vacío</span><p>Aún no hay movimientos. Da el primer paso.</p></article><article class="state-card"><span class="tag">Cargando</span><div class="skel"></div><div class="skel" style="width:70%"></div><div class="skel" style="width:45%"></div></article><article class="state-card warn"><span class="tag">Error</span><p>No pudimos calcular la cuota. Reintenta o cambia el monto.</p></article><article class="state-card"><span class="tag">Éxito</span><p class="ok">✓ Cuota lista: $240.000 / mes.</p></article><article class="state-card"><span class="tag">Deshabilitado</span><p style="opacity:.5">Completa el monto para continuar.</p></article></div><p class="mono soft reveal" data-reveal="1" style="margin-top:24px;font-size:14px">Pixel-perfect del happy path = 20% del trabajo real.</p></div>`,
+    content: () => `<div class="content"><p class="kicker">CONTENIDO ANTES QUE ESTÉTICA</p><h2 class="reveal" data-reveal="0">La IA maqueta el happy path. El producto vive en sus estados.</h2><div class="states-grid"><article class="state-card"><span class="tag">Vacío</span><p>Aún no hay movimientos. Da el primer paso.</p></article><article class="state-card"><span class="tag">Cargando</span><div class="skel"></div><div class="skel" style="width:70%"></div><div class="skel" style="width:45%"></div></article><article class="state-card warn"><span class="tag">Error</span><p>No pudimos calcular la cuota. Reintenta o cambia el monto.</p></article><article class="state-card"><span class="tag">Éxito</span><p class="ok">✓ Cuota lista: $240.000&nbsp;/&nbsp;mes.</p></article><article class="state-card"><span class="tag">Deshabilitado</span><p style="opacity:.5">Completa el monto para continuar.</p></article></div><p class="mono soft reveal" data-reveal="1" style="margin-top:24px;font-size:14px">Pixel-perfect del happy path = 20% del trabajo real.</p></div>`,
   },
   {
     label: "Tipografía",
@@ -117,7 +117,7 @@ const scenes = [
   {
     label: "Espacio",
     beats: 2,
-    content: () => `<div class="content"><p class="kicker">EJEMPLO 03 · RITMO</p><h2>El espacio agrupa.</h2><div class="token-lab" id="tokenLab"><article class="token-card"><span class="demo-kicker">CUOTA POSIBLE</span><h3>$ 240.000</h3><p>al mes durante 24 meses</p><button class="demo-action quiet" type="button">Ver detalle</button></article><div class="control-block"><label class="control-row">Radio <input id="radiusRange" aria-label="Cambiar radio" type="range" min="8" max="28" value="18" /><output id="radiusValue">18 px</output></label><label class="control-row">Padding <input id="paddingRange" aria-label="Cambiar espacio interior" type="range" min="14" max="38" value="26" /><output id="paddingValue">26 px</output></label><p class="mono soft" style="font-size:14px">gap-2 · gap-4 · gap-8 · más aire entre grupos que dentro</p></div></div></div>`,
+    content: () => `<div class="content"><p class="kicker">EJEMPLO 03 · RITMO</p><h2>El espacio agrupa.</h2><div class="token-lab" id="tokenLab"><article class="token-card"><span class="demo-kicker">CUOTA POSIBLE</span><h3>$&nbsp;240.000</h3><p>al mes durante 24 meses</p><button class="demo-action quiet" type="button">Ver detalle</button></article><div class="control-block"><label class="control-row">Radio <input id="radiusRange" aria-label="Cambiar radio" type="range" min="8" max="28" value="18" /><output id="radiusValue">18 px</output></label><label class="control-row">Padding <input id="paddingRange" aria-label="Cambiar espacio interior" type="range" min="14" max="38" value="26" /><output id="paddingValue">26 px</output></label><p class="mono soft" style="font-size:14px">gap-2 · gap-4 · gap-8 · más aire entre grupos que dentro</p></div></div></div>`,
   },
   {
     label: "Affordances",
@@ -129,7 +129,7 @@ const scenes = [
 .button<span class="k">:hover</span>         { opacity: .9; }
 .button<span class="k">:active</span>        { transform: scale(.98); }
 .button<span class="k">:focus-visible</span> { outline: 2px solid; }
-.button<span class="k">:disabled</span>      { opacity: .5; cursor: not-allowed; }</div><div><div class="err-row bad"><span class="tag">❌ Genérico</span><h3>Something went wrong</h3></div><div class="err-row after" style="margin-top:14px"><span class="tag">✓ Defensive UI</span><h3>Ese correo ya está registrado. ¿Quieres iniciar sesión?</h3></div><p class="soft" style="margin-top:16px;font-size:15px">Cada error es una conversación con alguien frustrado. Di qué pasó <strong style="color:var(--ink);font-weight:600">y</strong> qué hacer.</p></div></div></div>`,
+.button<span class="k">:disabled</span>      { opacity: .5; cursor: not-allowed; }</div><div><div class="err-row bad"><span class="tag">✕ Genérico</span><h3>Something went wrong</h3></div><div class="err-row after" style="margin-top:14px"><span class="tag">✓ Defensive UI</span><h3>Ese correo ya está registrado. ¿Quieres iniciar sesión?</h3></div><p class="soft" style="margin-top:16px;font-size:15px">Cada error es una conversación con alguien frustrado. Di qué pasó <strong style="color:var(--ink);font-weight:600">y</strong> qué hacer.</p></div></div></div>`,
   },
   {
     label: "Movimiento",
@@ -214,12 +214,17 @@ function wireInteractions() {
   });
 }
 
+const totalSteps = scenes.reduce((n, s) => n + s.beats + 1, 0);
+const progressFill = document.querySelector("#progressFill");
 let lastScene = -1;
 function render() {
   const scene = scenes[sceneIndex];
   const enter = sceneIndex !== lastScene ? " enter" : "";
   lastScene = sceneIndex;
-  deck.innerHTML = `<section class="scene${enter}" data-beat="${beat}" aria-roledescription="escena" aria-label="${scene.label}"><header class="chrome"><span>Des·IA·izar</span><span class="stage">${String(sceneIndex + 1).padStart(2, "0")} · ${String(beat + 1).padStart(2, "0")}</span></header>${scene.content(beat)}</section>`;
+  deck.innerHTML = `<section class="scene${enter}" data-beat="${beat}" aria-roledescription="escena" aria-label="${scene.label}"><header class="chrome"><span class="brand" translate="no">Des·IA·izar</span><span class="stage">${String(sceneIndex + 1).padStart(2, "0")} · ${String(beat + 1).padStart(2, "0")}</span></header>${scene.content(beat)}</section>`;
+  const stepsBefore = scenes.slice(0, sceneIndex).reduce((n, s) => n + s.beats + 1, 0);
+  const progress = totalSteps > 1 ? (stepsBefore + beat) / (totalSteps - 1) : 1;
+  progressFill.style.transform = `scaleX(${progress})`;
   wireInteractions();
 }
 

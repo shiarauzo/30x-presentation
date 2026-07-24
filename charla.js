@@ -60,11 +60,6 @@ const scenes = [
     content: () => `<div class="content media left"><div class="copy"><p class="reveal" data-reveal="0" style="color:var(--muted)">Esto fue lo único que entendió su focus group:</p><h2 class="reveal" data-reveal="1" style="margin-top:10px">Si tienes que explicarlo, <span class="dim" style="color:var(--faint)">no funciona</span>.</h2></div><figure class="reveal" data-reveal="0"><img src="img/sv-focusgroup.png" width="1231" height="698" alt="Participante confundido durante la demo de Pied Piper" /></figure></div>`,
   },
   {
-    label: "Qué te llevas",
-    beats: 1,
-    content: () => `<div class="content"><p class="part">Para qué estás aquí</p><h2>Qué te llevas de esta sesión</h2><div class="two" style="grid-template-columns:1.2fr .8fr"><div class="list"><p>Cómo <strong>pensar en producto</strong> antes de escribir código.</p><p>El <strong>Design Sprint</strong> para construir algo real en 48 horas.</p><p>Que tu <strong>demo se entienda sola</strong> y convenza al juez.</p><p>Herramientas para <strong>shippear rápido</strong>.</p></div><div style="border-left:1px solid var(--line);padding-left:32px"><p class="part" style="margin-bottom:14px">La ruta</p><div class="list"><p>01 · Piensa en producto</p><p>02 · Construye con criterio</p><p>03 · Que se entienda sola</p><p>04 · El Design Sprint</p><p>05 · Lanza rápido</p></div></div></div></div>`,
-  },
-  {
     label: "Quién soy",
     beats: 1,
     content: () => `<div class="content media portrait left"><div class="copy"><p class="part">Quién soy</p><h2>Shiara Arauzo</h2><p class="role">Design engineer &amp; builder</p><p class="reveal" data-reveal="0">He shippeado en mundos muy distintos —<span class="accent">videojuegos, el Estado, banca, AI, investigación</span> y retail— y eso me enseñó que el método de producto es el mismo en todos.</p><p class="stat reveal" data-reveal="1"><b>93</b><span>proyectos lanzados · <span class="accent">@shiarauzo</span></span></p></div><figure><img src="img/shiara.jpg" width="400" height="400" alt="Foto de Shiara Arauzo" /></figure></div>`,

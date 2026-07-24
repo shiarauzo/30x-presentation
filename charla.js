@@ -63,33 +63,23 @@ const scenes = [
   {
     label: "Campana",
     beats: 1,
-    content: () => `<div class="content"><p class="part">La IA aprende de todo internet</p><h2>Y te devuelve el promedio.</h2><div class="bell"><svg viewBox="0 0 760 300" role="img" aria-label="Campana de Gauss: la mayoría de diseños generados por IA caen en el promedio genérico; el buen diseño es raro, en los extremos"><line x1="40" y1="248" x2="720" y2="248" stroke="#232329" stroke-width="1" /><path d="M40,248 C210,248 300,80 380,80 C460,80 550,248 720,248 Z" fill="#ffffff" fill-opacity="0.05" /><path d="M40,248 C210,248 300,80 380,80 C460,80 550,248 720,248" fill="none" stroke="#9a9aa3" stroke-width="2" /><line x1="380" y1="92" x2="380" y2="248" stroke="#6f6f79" stroke-width="1" stroke-dasharray="3 4" /><text x="380" y="124" text-anchor="middle" fill="#f4f4f5" font-size="16" font-family="Geist, sans-serif">la mayoría de diseños de IA</text><text x="380" y="272" text-anchor="middle" fill="#9a9aa3" font-size="12" letter-spacing="1.5" font-family="Geist Mono, monospace">EL PROMEDIO · LO QUE YA ESTÁ EN INTERNET</text><circle cx="666" cy="232" r="5" fill="#f4f4f5" /><text x="666" y="214" text-anchor="middle" fill="#f4f4f5" font-size="14" font-family="Geist, sans-serif">criterio</text></svg></div><p class="reveal" data-reveal="1" style="margin-top:8px;max-width:60ch">La mayoría de lo que genera es lo que ya viste mil veces. El promedio no es buen diseño.</p></div>`,
+    content: () => `<div class="content"><p class="part">La IA aprende de todo internet</p><h2>Y te devuelve el promedio.</h2><div class="bell"><svg viewBox="0 58 760 228" role="img" aria-label="Campana de Gauss: la mayoría de diseños generados por IA caen en el promedio genérico; el buen diseño es raro, en los extremos"><line x1="40" y1="248" x2="720" y2="248" stroke="#232329" stroke-width="1" /><path d="M40,248 C210,248 300,80 380,80 C460,80 550,248 720,248 Z" fill="#ffffff" fill-opacity="0.05" /><path d="M40,248 C210,248 300,80 380,80 C460,80 550,248 720,248" fill="none" stroke="#9a9aa3" stroke-width="2" /><line x1="380" y1="92" x2="380" y2="248" stroke="#6f6f79" stroke-width="1" stroke-dasharray="3 4" /><text x="380" y="124" text-anchor="middle" fill="#f4f4f5" font-size="16" font-family="Geist, sans-serif">la mayoría de diseños de IA</text><text x="380" y="272" text-anchor="middle" fill="#9a9aa3" font-size="12" letter-spacing="1.5" font-family="Geist Mono, monospace">EL PROMEDIO · LO QUE YA ESTÁ EN INTERNET</text><circle cx="666" cy="232" r="5" fill="#f4f4f5" /><text x="666" y="214" text-anchor="middle" fill="#f4f4f5" font-size="14" font-family="Geist, sans-serif">criterio</text></svg></div><p class="reveal" data-reveal="1" style="margin-top:8px;max-width:60ch">La mayoría de lo que genera es lo que ya viste mil veces. El promedio no es buen diseño.</p></div>`,
   },
   {
     label: "Toque humano",
     beats: 1,
-    content: () => `<div class="content narrow opening"><p class="part reveal" data-reveal="0">Por eso</p><h1 class="reveal" data-reveal="0">El toque humano lo pones tú.</h1><p class="reveal" data-reveal="1" style="margin-top:16px">Y no se improvisa: <span class="accent">investiga a tu usuario</span> y <span class="accent">diseña con intención</span>.</p></div>`,
-  },
-  {
-    label: "Shippear",
-    beats: 0,
-    content: () => `<div class="content"><div class="wiki"><div><h2>Shippear</h2><p class="from">De Wikipedia, la enciclopedia libre</p><p><strong>Shippear</strong> (del inglés <em>to ship</em>, «enviar») es el <span class="link">arte</span> de construir algo y <span class="link">mostrárselo al mundo</span>. No basta con crearlo: hay que <span class="link">lanzarlo</span> para que exista.</p><p>Lo contrario es dejar tu proyecto en el laptop, donde nadie lo ve.</p></div><aside><div class="head">Shippear</div><div class="body"><div><strong>Tipo</strong> · arte de construir</div><div><strong>Sinónimos</strong> · lanzar, publicar</div><div><strong>Opuesto</strong> · quedarse en el laptop</div><div><strong>En hackathon</strong> · obligatorio</div></div></aside></div></div>`,
+    content: () => `<div class="content narrow opening"><p class="part reveal" data-reveal="0">Por eso</p><h1 class="reveal" data-reveal="0">El toque humano lo pones tú.</h1><p class="reveal" data-reveal="1" style="margin-top:16px"><span class="accent">Investiga</span> a tu usuario, <span class="accent">encuentra su problema</span> real y <span class="accent">diseña</span> para lo que necesita.</p></div>`,
   },
   // ===== PARTE 01 · PIENSA EN PRODUCTO =====
   {
     label: "Parte 01",
     beats: 0,
-    content: () => `<div class="content"><p class="part">Parte 01</p><h1 class="section-title">Piensa en producto</h1><div class="rule-line"></div><p class="section-sub">Antes de tocar el teclado.</p></div>`,
+    content: () => `<div class="content"><p class="part">Parte 01</p><h1 class="section-title">Piensa en producto</h1><p class="section-sub">Antes de tocar el teclado.</p></div>`,
   },
   {
     label: "4 preguntas",
     beats: 1,
-    content: () => `<div class="content"><p class="part">Antes de tocar el teclado</p><h2>Pensar en producto es responder cuatro preguntas.</h2><div class="list num" style="margin-top:22px"><p><span class="em">Para quién</span> construyes — una persona concreta, no «todos».</p><p><span class="em">Qué problema</span> le resuelves — el dolor real, no tu solución.</p><p><span class="em">Por qué tú</span> — mejor que lo que ya usa hoy.</p><p><span class="em">Qué es lo mínimo</span> para probar que funciona.</p></div></div>`,
-  },
-  {
-    label: "Problema real",
-    beats: 1,
-    content: () => `<div class="content narrow" style="text-align:center"><p class="quote" style="margin:0 auto;color:var(--faint)">No estás construyendo features.</p><div class="rule-line" style="margin:24px auto"></div><p class="quote reveal" data-reveal="1" style="margin:0 auto">Estás resolviendo <span class="accent">un problema</span>.</p></div>`,
+    content: () => `<div class="content"><p class="part">Antes de tocar el teclado</p><h2>Pensar en producto es responder cuatro preguntas.</h2><div class="qgrid"><article class="q"><span class="qn">01</span><h3>Para quién</h3><p>Una persona concreta, no «todos».</p></article><article class="q"><span class="qn">02</span><h3>Qué problema</h3><p>El dolor real, no tu solución.</p></article><article class="q"><span class="qn">03</span><h3>Por qué tú</h3><p>Mejor que lo que ya usa hoy.</p></article><article class="q"><span class="qn">04</span><h3>Qué es lo mínimo</h3><p>Para probar que funciona.</p></article></div></div>`,
   },
   {
     label: "Usuario",
@@ -99,12 +89,12 @@ const scenes = [
   {
     label: "Redactar usuario",
     beats: 1,
-    content: () => `<div class="content"><p class="part">Sé específico</p><h2>Cómo redactar a tu usuario</h2><p class="mono soft" style="margin:16px 0 0;font-size:15px">«Un [persona concreta] que quiere [objetivo] pero [obstáculo].»</p><div class="dodont reveal" data-reveal="1"><div class="bad"><p class="h">Don’t</p><p>«Todos los que usan apps» · «la gente joven» · «usuarios»</p></div><div class="good"><p class="h">Do</p><p>Un <strong>estudiante de primer año</strong> que se muda y no conoce a nadie.</p><p>Una <strong>diseñadora freelance</strong> que pierde horas cotizando a mano.</p><p>Un <strong>dueño de cafetería</strong> que pierde pedidos anotados en papel.</p></div></div><p class="soft" style="margin-top:18px;font-size:15px">Si tu usuario es «todos», no es nadie. Ponle nombre, contexto y un mal día.</p></div>`,
+    content: () => `<div class="content"><p class="part">Sé específico</p><h2>Redacta a tu usuario en una línea.</h2><p class="mono soft" style="margin:16px 0 0;font-size:15px">«Un [persona] que quiere [objetivo] pero [obstáculo].»</p><div class="dodont reveal" data-reveal="1"><div class="bad"><p class="h">Don’t</p><p>«usuarios» · «la gente joven»</p></div><div class="good"><p class="h">Do</p><p>Un <strong>estudiante</strong> que se muda y no conoce a nadie.</p><p>Un <strong>dueño de cafetería</strong> que pierde pedidos en papel.</p></div></div><p class="soft" style="margin-top:18px;font-size:15px">Si es «todos», no es nadie.</p></div>`,
   },
   {
     label: "Heavy vs light",
     beats: 1,
-    content: () => `<div class="content"><p class="part">No todos pesan igual</p><h2>Heavy user y light user</h2><div class="two"><div style="border-top:2px solid var(--ink);padding-top:14px"><h3>Heavy user</h3><p style="margin-top:8px">Vive el problema a diario, lo usaría siempre y te perdona que esté feo con tal de que funcione. Te da el feedback más honesto.</p><p class="soft" style="margin-top:12px;font-size:15px">Es <span class="accent">Ana</span>: se muda este semestre y necesita roommate ya.</p></div><div style="border-top:2px solid var(--line);padding-top:14px"><h3 style="color:var(--muted)">Light user</h3><p style="margin-top:8px">Le incomoda pero no le arde. Entra de vez en cuando y valora la simplicidad. Si no se entiende al instante, se va.</p><p class="soft" style="margin-top:12px;font-size:15px">Es <span class="accent">Leo</span>: ya tiene depa y solo curiosea.</p></div></div><p class="reveal" data-reveal="1" style="margin-top:22px;color:var(--ink)">Diseña tu demo para <span class="accent">Ana</span>. Si resuelves su dolor, Leo llega solo.</p></div>`,
+    content: () => `<div class="content"><p class="part">No todos pesan igual</p><h2>Heavy user y light user</h2><div class="two"><div style="border-top:2px solid var(--ink);padding-top:14px"><h3>Heavy user</h3><p style="margin-top:8px">Vive el problema a diario, lo usaría siempre y te perdona que esté feo con tal de que funcione. Te da el feedback más honesto.</p><p class="soft" style="margin-top:24px;font-size:15px">Es <span class="accent">Ana</span>: se muda este semestre y necesita roommate ya.</p></div><div style="border-top:2px solid var(--line);padding-top:14px"><h3 style="color:var(--muted)">Light user</h3><p style="margin-top:8px">Le incomoda pero no le arde. Entra de vez en cuando y valora la simplicidad. Si no se entiende al instante, se va.</p><p class="soft" style="margin-top:24px;font-size:15px">Es <span class="accent">Leo</span>: ya tiene depa y solo curiosea.</p></div></div><p class="reveal" data-reveal="1" style="margin-top:22px;color:var(--ink)">Diseña tu demo para <span class="accent">Ana</span>. Si resuelves su dolor, Leo llega solo.</p></div>`,
   },
   {
     label: "Competencia",
@@ -114,13 +104,13 @@ const scenes = [
   {
     label: "Jueces",
     beats: 1,
-    content: () => `<div class="content"><p class="part">Haz tu tarea</p><h2>Tus jueces son tus usuarios.</h2><div class="list" style="margin-top:18px"><p>Lee <span class="em">las bases y el landing</span>: ahí dice qué se premia de verdad.</p><p>Estudia al <span class="em">jurado y los mentores</span>: sus perfiles dicen qué los impresiona.</p><p>Mira los <span class="em">tracks y sponsors</span>: ahí están los problemas que quieren ver resueltos.</p></div><p class="reveal" data-reveal="1" style="margin-top:20px;color:var(--ink)">El juez tiene un contexto y un mal día, igual que tu usuario. Diséñale la demo a él.</p></div>`,
+    content: () => `<div class="content"><p class="part">Haz tu tarea</p><h2>Tus jueces son tus usuarios.</h2><div class="list" style="margin-top:18px"><p>Lee <span class="em">las bases y el landing</span>: ahí dice qué se premia de verdad.</p><p>Estudia al <span class="em">jurado y los mentores</span>: sus perfiles dicen qué los impresiona.</p><p>Mira los <span class="em">tracks y sponsors</span>: ahí están los problemas que quieren ver resueltos.</p></div><p class="reveal" data-reveal="1" style="margin-top:20px;color:var(--ink)">El juez tiene un contexto, igual que tu usuario. Diséñale la demo a él.</p></div>`,
   },
   // ===== PARTE 02 · EL DESIGN SPRINT =====
   {
     label: "Parte 02",
     beats: 0,
-    content: () => `<div class="content"><p class="part">Parte 02</p><h1 class="section-title">El Design Sprint</h1><div class="rule-line"></div><p class="section-sub">Nació en Google Ventures para construir y validar en días, no meses.</p></div>`,
+    content: () => `<div class="content"><p class="part">Parte 02</p><h1 class="section-title">El Design Sprint</h1><p class="section-sub">Nació en Google Ventures para construir y validar en días, no meses.</p></div>`,
   },
   {
     label: "Seguir o pivotear",
@@ -154,7 +144,7 @@ const scenes = [
   {
     label: "Parte 03",
     beats: 0,
-    content: () => `<div class="content"><p class="part">Parte 03</p><h1 class="section-title">Que se entienda sola</h1><div class="rule-line"></div><p class="section-sub">Ya construiste algo. Ahora el detalle es lo que convence al juez.</p></div>`,
+    content: () => `<div class="content"><p class="part">Parte 03</p><h1 class="section-title">Que se entienda sola</h1><p class="section-sub">Ya construiste algo. Ahora el detalle es lo que convence al juez.</p></div>`,
   },
   {
     label: "Precisión",
@@ -218,7 +208,7 @@ const scenes = [
   {
     label: "Parte 04",
     beats: 0,
-    content: () => `<div class="content"><p class="part">Parte 04</p><h1 class="section-title">Lanza rápido</h1><div class="rule-line"></div><p class="section-sub">Hecho, mostrado y entendido — hoy.</p></div>`,
+    content: () => `<div class="content"><p class="part">Parte 04</p><h1 class="section-title">Lanza rápido</h1><p class="section-sub">Hecho, mostrado y entendido — hoy.</p></div>`,
   },
   {
     label: "Hecho > perfecto",

@@ -60,8 +60,8 @@ const transformMoves = [
 const scenes = [
   {
     label: "Abrir",
-    beats: 2,
-    content: () => `<div class="content narrow opening"><p class="kicker reveal" data-reveal="0">DES·IA·IZAR EL DISEÑO</p><h1 class="reveal" data-reveal="0">Construir nunca fue tan fácil.</h1><h1 class="second reveal" data-reveal="1">Elegir importa más.</h1><p class="third reveal" data-reveal="2">Decide <span class="display-serif">para quién</span>.</p></div>`,
+    beats: 1,
+    content: () => `<div class="content narrow opening"><h1 class="reveal" data-reveal="0">Construir nunca fue tan fácil.</h1><h1 class="reveal" data-reveal="1">Por eso elegir <span class="display-serif">cómo lo construimos</span> importa más.</h1></div>`,
   },
   {
     label: "Slop",
@@ -221,7 +221,7 @@ function render() {
   const scene = scenes[sceneIndex];
   const enter = sceneIndex !== lastScene ? " enter" : "";
   lastScene = sceneIndex;
-  deck.innerHTML = `<section class="scene${enter}" data-beat="${beat}" aria-roledescription="escena" aria-label="${scene.label}"><header class="chrome"><span class="brand" translate="no">Des·IA·izar</span><span class="stage">${String(sceneIndex + 1).padStart(2, "0")} · ${String(beat + 1).padStart(2, "0")}</span></header>${scene.content(beat)}</section>`;
+  deck.innerHTML = `<section class="scene${enter}" data-beat="${beat}" aria-roledescription="escena" aria-label="${scene.label}"><header class="chrome"><span class="brand"></span><span class="stage">${String(sceneIndex + 1).padStart(2, "0")} · ${String(beat + 1).padStart(2, "0")}</span></header>${scene.content(beat)}</section>`;
   const stepsBefore = scenes.slice(0, sceneIndex).reduce((n, s) => n + s.beats + 1, 0);
   const progress = totalSteps > 1 ? (stepsBefore + beat) / (totalSteps - 1) : 1;
   progressFill.style.transform = `scaleX(${progress})`;

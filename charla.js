@@ -67,8 +67,8 @@ const scenes = [
   // ===== TESIS PUENTE =====
   {
     label: "Tesis",
-    beats: 1,
-    content: () => `<div class="content narrow opening"><h1 class="reveal" data-reveal="0">Construir nunca fue tan fácil.</h1><h1 class="reveal" data-reveal="1">Por eso elegir <span class="accent">cómo lo construimos</span> importa más.</h1></div>`,
+    beats: 2,
+    content: () => `<div class="content narrow opening"><p class="part reveal" data-reveal="0">La tesis</p><h1 class="reveal" data-reveal="0">Con IA, shippear toma horas.</h1><h1 class="reveal" data-reveal="1" style="color:var(--faint)">El toque humano lo pones tú.</h1><p class="reveal" data-reveal="2" style="margin-top:16px">Y no se improvisa: <span class="accent">investiga a tu usuario</span> y <span class="accent">diseña con intención</span>.</p></div>`,
   },
   {
     label: "Shippear",

@@ -104,7 +104,7 @@ const scenes = [
   {
     label: "Jueces",
     beats: 1,
-    content: () => `<div class="content"><p class="part">Haz tu tarea</p><h2>Tus jueces son tus usuarios.</h2><div class="list" style="margin-top:18px"><p>Lee <span class="em">las bases y el landing</span>: ahí dice qué se premia de verdad.</p><p>Estudia al <span class="em">jurado y los mentores</span>: sus perfiles dicen qué los impresiona.</p><p>Mira los <span class="em">tracks y sponsors</span>: ahí están los problemas que quieren ver resueltos.</p></div><p class="reveal" data-reveal="1" style="margin-top:20px;color:var(--ink)">El juez tiene un contexto y un mal día, igual que tu usuario. Diséñale la demo a él.</p></div>`,
+    content: () => `<div class="content"><p class="part">Haz tu tarea</p><h2>Tus jueces son tus usuarios.</h2><div class="list" style="margin-top:18px"><p>Lee <span class="em">las bases y el landing</span>: ahí dice qué se premia de verdad.</p><p>Estudia al <span class="em">jurado y los mentores</span>: sus perfiles dicen qué los impresiona.</p><p>Mira los <span class="em">tracks y sponsors</span>: ahí están los problemas que quieren ver resueltos.</p></div><p class="reveal" data-reveal="1" style="margin-top:20px;color:var(--ink)">El juez tiene un contexto, igual que tu usuario. Diséñale la demo a él.</p></div>`,
   },
   // ===== PARTE 02 · EL DESIGN SPRINT =====
   {

@@ -1,7 +1,11 @@
+@font-face { font-family: "Space Grotesk"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/space-grotesk-400.woff2") format("woff2"); }
+@font-face { font-family: "Space Grotesk"; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/space-grotesk-500.woff2") format("woff2"); }
+@font-face { font-family: "Space Grotesk"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/space-grotesk-700.woff2") format("woff2"); }
+
 :root {
   background: #08080a;
   color: #f4f4f5;
-  font-family: "Inter", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Space Grotesk", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
   font-synthesis: none;
   --bg: #08080a;
   --ink: #f4f4f5;
@@ -33,6 +37,9 @@ button { cursor: pointer; }
   grid-template-rows: 28px 1fr;
   gap: 28px;
 }
+/* Entrada suave solo al cambiar de slide (no entre beats) */
+.scene.enter { animation: sceneIn 420ms cubic-bezier(.22, .61, .36, 1) both; }
+@keyframes sceneIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
 
 .chrome {
   display: flex;

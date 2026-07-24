@@ -214,9 +214,12 @@ function wireInteractions() {
   });
 }
 
+let lastScene = -1;
 function render() {
   const scene = scenes[sceneIndex];
-  deck.innerHTML = `<section class="scene" data-beat="${beat}" aria-roledescription="escena" aria-label="${scene.label}"><header class="chrome"><span>Des·IA·izar</span><span class="stage">${String(sceneIndex + 1).padStart(2, "0")} · ${String(beat + 1).padStart(2, "0")}</span></header>${scene.content(beat)}</section>`;
+  const enter = sceneIndex !== lastScene ? " enter" : "";
+  lastScene = sceneIndex;
+  deck.innerHTML = `<section class="scene${enter}" data-beat="${beat}" aria-roledescription="escena" aria-label="${scene.label}"><header class="chrome"><span>Des·IA·izar</span><span class="stage">${String(sceneIndex + 1).padStart(2, "0")} · ${String(beat + 1).padStart(2, "0")}</span></header>${scene.content(beat)}</section>`;
   wireInteractions();
 }
 

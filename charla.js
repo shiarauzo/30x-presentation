@@ -45,30 +45,30 @@ const scenes = [
     content: () => `<div class="content narrow opening"><p class="part reveal" data-reveal="0">Charla · Hackathon</p><h1 class="reveal" data-reveal="0"><span style="color:var(--faint)">des-</span>IA<span style="color:var(--faint)">-izar</span></h1><h1 class="reveal" data-reveal="1">productos digitales</h1></div>`,
   },
   {
-    label: "Pied Piper",
+    label: "El test",
     beats: 1,
-    content: () => `<div class="content media"><div class="copy"><p class="part">Silicon Valley · contexto</p><h2 class="reveal" data-reveal="0">Pied Piper</h2><p class="reveal" data-reveal="0" style="margin-top:14px">Empezó como una app para músicos. Lo valioso resultó ser <span class="accent">el motor de compresión escondido dentro</span>.</p></div><figure class="reveal" data-reveal="1"><img src="img/pied-piper.gif" width="400" height="225" alt="Richard de Silicon Valley con una camiseta de Pied Piper" fetchpriority="high" /></figure></div>`,
-  },
-  {
-    label: "Whiteboard",
-    beats: 1,
-    content: () => `<div class="content media"><div class="copy"><p class="part">Silicon Valley · HBO</p><h2 class="reveal" data-reveal="0">Tenía la mejor compresión del mundo.</h2><p class="reveal" data-reveal="1" style="margin-top:14px">Richard la explicó por horas en una pizarra.</p></div><figure class="reveal" data-reveal="0"><img src="img/sv-whiteboard.webp" width="1500" height="837" alt="Richard explicando la arquitectura de Pied Piper en una pizarra llena de diagramas" /></figure></div>`,
-  },
-  {
-    label: "Focus group",
-    beats: 1,
-    content: () => `<div class="content media left"><div class="copy"><p class="reveal" data-reveal="0" style="color:var(--muted)">Esto fue lo único que entendió su focus group:</p><h2 class="reveal" data-reveal="1" style="margin-top:10px">Si tienes que explicarlo, <span class="dim" style="color:var(--faint)">no funciona</span>.</h2></div><figure class="reveal" data-reveal="0"><img src="img/sv-focusgroup.png" width="1231" height="698" alt="Participante confundido durante la demo de Pied Piper" /></figure></div>`,
+    content: () => `<div class="content media left"><div class="copy"><p class="part">El test más honesto</p><h2 class="reveal" data-reveal="0">Si tienes que explicarlo, <span style="color:var(--faint)">no funciona</span>.</h2><p class="reveal" data-reveal="1" style="margin-top:14px">La mejor tecnología del mundo no sirve si quien la ve no la entiende.</p></div><figure class="reveal" data-reveal="0"><img src="img/sv-focusgroup.png" width="1231" height="698" alt="Persona sin entender un producto durante una demo" /></figure></div>`,
   },
   {
     label: "Quién soy",
     beats: 1,
-    content: () => `<div class="content media portrait left"><div class="copy"><p class="part">Quién soy</p><h2>Shiara Arauzo</h2><p class="role">Design engineer &amp; builder</p><p class="reveal" data-reveal="0">He shippeado en mundos muy distintos —<span class="accent">videojuegos, el Estado, banca, AI, investigación</span> y retail— y eso me enseñó que el método de producto es el mismo en todos.</p><p class="stat reveal" data-reveal="1"><b>93</b><span>proyectos lanzados · <span class="accent">@shiarauzo</span></span></p></div><figure><img src="img/shiara.jpg" width="400" height="400" alt="Foto de Shiara Arauzo" /></figure></div>`,
+    content: () => `<div class="content media portrait left"><div class="copy"><p class="part">Quién soy</p><h2>Shiara Arauzo</h2><p class="role">Design engineer &amp; builder</p><p class="reveal" data-reveal="0">Soy design engineer: <span class="accent">diseño y programo el mismo producto</span>. Uso IA para ir rápido —pero el criterio (para quién, qué promete, cómo se siente) lo pongo a mano. De eso va esta charla.</p><p class="stat reveal" data-reveal="1"><b>93</b><span>productos shippeados · <span class="accent">@shiarauzo</span></span></p></div><figure><img src="img/shiara.jpg" width="400" height="400" alt="Foto de Shiara Arauzo" /></figure></div>`,
   },
   // ===== TESIS PUENTE =====
   {
     label: "Tesis",
-    beats: 2,
-    content: () => `<div class="content narrow opening"><p class="part reveal" data-reveal="0">La tesis</p><h1 class="reveal" data-reveal="0">Con IA, shippear toma horas.</h1><h1 class="reveal" data-reveal="1" style="color:var(--faint)">El toque humano lo pones tú.</h1><p class="reveal" data-reveal="2" style="margin-top:16px">Y no se improvisa: <span class="accent">investiga a tu usuario</span> y <span class="accent">diseña con intención</span>.</p></div>`,
+    beats: 1,
+    content: () => `<div class="content narrow opening"><p class="part reveal" data-reveal="0">La tesis</p><h1 class="reveal" data-reveal="0">Con IA, construir productos toma pocas horas.</h1><h1 class="reveal" data-reveal="1" style="color:var(--faint)">Pero casi todos salen iguales.</h1></div>`,
+  },
+  {
+    label: "Campana",
+    beats: 1,
+    content: () => `<div class="content"><p class="part">La IA aprende de todo internet</p><h2>Y te devuelve el promedio.</h2><div class="bell"><svg viewBox="0 0 760 300" role="img" aria-label="Campana de Gauss: la mayoría de diseños generados por IA caen en el promedio genérico; el buen diseño es raro, en los extremos"><line x1="40" y1="248" x2="720" y2="248" stroke="#232329" stroke-width="1" /><path d="M40,248 C210,248 300,80 380,80 C460,80 550,248 720,248 Z" fill="#ffffff" fill-opacity="0.05" /><path d="M40,248 C210,248 300,80 380,80 C460,80 550,248 720,248" fill="none" stroke="#9a9aa3" stroke-width="2" /><line x1="380" y1="92" x2="380" y2="248" stroke="#6f6f79" stroke-width="1" stroke-dasharray="3 4" /><text x="380" y="124" text-anchor="middle" fill="#f4f4f5" font-size="16" font-family="Geist, sans-serif">la mayoría de diseños de IA</text><text x="380" y="272" text-anchor="middle" fill="#9a9aa3" font-size="12" letter-spacing="1.5" font-family="Geist Mono, monospace">EL PROMEDIO · LO QUE YA ESTÁ EN INTERNET</text><circle cx="666" cy="232" r="5" fill="#f4f4f5" /><text x="666" y="214" text-anchor="middle" fill="#f4f4f5" font-size="14" font-family="Geist, sans-serif">criterio</text></svg></div><p class="reveal" data-reveal="1" style="margin-top:8px;max-width:60ch">La mayoría de lo que genera es lo que ya viste mil veces. El promedio no es buen diseño.</p></div>`,
+  },
+  {
+    label: "Toque humano",
+    beats: 1,
+    content: () => `<div class="content narrow opening"><p class="part reveal" data-reveal="0">Por eso</p><h1 class="reveal" data-reveal="0">El toque humano lo pones tú.</h1><p class="reveal" data-reveal="1" style="margin-top:16px">Y no se improvisa: <span class="accent">investiga a tu usuario</span> y <span class="accent">diseña con intención</span>.</p></div>`,
   },
   {
     label: "Shippear",

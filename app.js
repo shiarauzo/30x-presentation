@@ -29,51 +29,117 @@ const challengeData = {
   },
 };
 
+// Una card de Crédito que se humaniza por capas (0 = slop, 4 = humano)
+function creditoCard(level) {
+  const kicker = `<span class="demo-kicker">CRÉDITO</span>`;
+  let stack;
+  if (level === 0) {
+    stack = `${kicker}<h3 class="demo-title">Encuentra el crédito ideal para ti</h3><p class="demo-copy">Tenemos las mejores tasas del mercado para que cumplas todos tus sueños.</p>`;
+  } else if (level === 1) {
+    stack = `${kicker}<h3 class="demo-title">Mira si esta cuota cabe en tu próximo paso</h3><p class="moment" style="margin-top:10px">Antes de decidir una compra.</p>`;
+  } else {
+    stack = `${kicker}<p class="num">$ 240.000 <small>/mes · 24 meses</small></p><p style="color:var(--ink);font-size:16px;margin:2px 0 0;line-height:1.3">Mira si esta cuota cabe en tu próximo paso</p><p class="moment" style="margin-top:6px">Antes de decidir una compra.</p>`;
+  }
+  let action;
+  if (level === 0) action = `<span style="color:#6f6f76;font-size:14px">Solicitar ahora ›</span>`;
+  else if (level < 4) action = `<span style="color:var(--muted);font-size:14px">Ver una cuota posible ›</span>`;
+  else action = `<div style="display:flex;gap:10px;align-items:center"><button class="demo-action" type="button">Ver una cuota posible</button><button class="demo-action quiet" type="button">Ver detalle</button></div>`;
+  const pad = level >= 3 ? 34 : 22;
+  const gap = level >= 3 ? 16 : 6;
+  return `<article class="demo-shell tcard-hero${level === 0 ? " slop" : ""}"><div class="demo-top"><div class="dots"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div><span>colubsidio</span></div><div class="demo-body" style="padding:${pad}px"><div class="group" style="gap:${gap}px">${stack}</div><div style="margin-top:${level >= 3 ? 24 : 16}px">${action}</div></div></article>`;
+}
+
+const transformMoves = [
+  { step: "Paso 0 · salida de IA", move: "Correcta. Y sin nadie adentro.", sub: "Todo del mismo tamaño. Una promesa que sirve para cualquier banco.", cls: "" },
+  { step: "Paso 1 · contenido", move: "Primero, el momento.", sub: "De “crédito ideal” a “esta cuota cabe en tu próximo paso”. Sin agregar features.", cls: "// solo copy" },
+  { step: "Paso 2 · jerarquía", move: "El dato manda.", sub: "La cuota es lo que importa; el resto baja de tono. Tamaño = decisión, no default.", cls: "text-3xl · tabular-nums · text-sm" },
+  { step: "Paso 3 · espacio", move: "El aire agrupa.", sub: "Más espacio entre grupos que dentro. La proximidad crea significado.", cls: "p-8 · space-y-2 · gap-6" },
+  { step: "Paso 4 · estados", move: "Un botón que se siente botón.", sub: "hover, active y focus-visible. Que se entienda qué hacer sin pensarlo.", cls: "hover · active:scale-98 · focus-visible" },
+];
+
 const scenes = [
   {
     label: "Abrir",
     beats: 2,
-    content: () => `<div class="content narrow opening"><p class="kicker reveal" data-reveal="0">DES IA IZAR</p><h1 class="reveal" data-reveal="0">Construir nunca fue tan fácil.</h1><h1 class="second reveal" data-reveal="1">Elegir importa más.</h1><p class="third reveal" data-reveal="2">Decide <span class="display-serif">para quién</span>.</p></div>`,
+    content: () => `<div class="content narrow opening"><p class="kicker reveal" data-reveal="0">DES·IA·IZAR EL DISEÑO</p><h1 class="reveal" data-reveal="0">Construir nunca fue tan fácil.</h1><h1 class="second reveal" data-reveal="1">Elegir importa más.</h1><p class="third reveal" data-reveal="2">Decide <span class="display-serif">para quién</span>.</p></div>`,
   },
   {
-    label: "Miro",
+    label: "Slop",
+    beats: 1,
+    content: () => `<div class="content"><p class="kicker">ESTO ES LO QUE TE DA LA IA</p><h2 class="reveal" data-reveal="0">Correcto. Y sin nadie adentro.</h2><div class="transform" style="margin-top:24px">${creditoCard(0)}<div class="tcaption"><p class="tsub reveal" data-reveal="0">Gris, plano, todo del mismo tamaño. Una promesa que sirve para cualquier banco.</p><p class="tsub reveal" data-reveal="1" style="color:var(--ink)">Guarden esta imagen. En 20 minutos va a estar irreconocible — sin tocar el color de marca.</p></div></div></div>`,
+  },
+  {
+    label: "Momentos",
     beats: 3,
-    content: () => `<div class="content"><p class="kicker">MAPA DE OPORTUNIDADES</p><h2>Resolver rápido no es diseñar mejor.</h2><p class="lead">Cuatro retos. Cuatro momentos.</p><div class="opportunity-grid"><article class="opportunity-card reveal" data-reveal="0"><span>01</span><h3>Crédito</h3><p>La decisión.</p></article><article class="opportunity-card reveal" data-reveal="1"><span>02</span><h3>Seguros</h3><p>La claridad.</p></article><article class="opportunity-card reveal" data-reveal="2"><span>03</span><h3>Vivienda</h3><p>La intención.</p></article><article class="opportunity-card reveal" data-reveal="3"><span>04</span><h3>Inventario</h3><p>El ritmo.</p></article></div></div>`,
+    content: () => `<div class="content"><p class="kicker">MAPA DE OPORTUNIDADES</p><h2>Resolver rápido no es diseñar mejor.</h2><p class="lead">Cuatro retos. Cuatro momentos humanos.</p><div class="opportunity-grid"><article class="opportunity-card reveal" data-reveal="0"><span>01</span><h3>Crédito</h3><p>La decisión.</p></article><article class="opportunity-card reveal" data-reveal="1"><span>02</span><h3>Seguros</h3><p>La claridad.</p></article><article class="opportunity-card reveal" data-reveal="2"><span>03</span><h3>Vivienda</h3><p>La intención.</p></article><article class="opportunity-card reveal" data-reveal="3"><span>04</span><h3>Inventario</h3><p>El ritmo.</p></article></div></div>`,
   },
   {
     label: "Persona",
     beats: 2,
-    content: () => `<div class="content split"><div class="copy-stack"><p class="kicker reveal" data-reveal="0">PERSONA</p><h2 class="reveal" data-reveal="0">La IA parte de un promedio.</h2><h2 class="display-serif accent reveal" data-reveal="1">Parte de un momento.</h2><p class="reveal" data-reveal="2">¿Qué necesita decidir ahora?</p></div><aside class="rule reveal" data-reveal="2"><span class="number">1</span><h3>pregunta por pantalla</h3></aside></div>`,
-  },
-  {
-    label: "Landing",
-    beats: 2,
-    content: () => `<div class="content"><p class="kicker">EJEMPLO 01 · LANDING</p><h2>Una promesa genérica no basta.</h2><div class="challenge-demo demo-shell" id="landingDemo"></div></div>`,
+    content: () => `<div class="content split"><div class="copy-stack"><p class="kicker reveal" data-reveal="0">PERSONA</p><h2 class="reveal" data-reveal="0">La IA parte de un promedio.</h2><h2 class="display-serif reveal" data-reveal="1">Parte de un momento.</h2><p class="reveal" data-reveal="2">¿Qué está a punto de decidir hoy?</p></div><aside class="rule reveal" data-reveal="2"><span class="number">1</span><h3>pregunta por pantalla</h3></aside></div>`,
   },
   {
     label: "Postura",
     beats: 3,
-    content: () => `<div class="content split"><div class="copy-stack"><p class="kicker reveal" data-reveal="0">POSTURA</p><h2 class="reveal" data-reveal="0">No vendas el sistema.</h2><h2 class="display-serif accent reveal" data-reveal="1">Vende el cambio.</h2><p class="mono accent reveal" data-reveal="2">persona + momento + promesa + acción</p></div><aside class="rule reveal" data-reveal="3"><span class="number">10</span><h3>segundos para entenderlo</h3></aside></div>`,
+    content: () => `<div class="content split"><div class="copy-stack"><p class="kicker reveal" data-reveal="0">POSTURA</p><h2 class="reveal" data-reveal="0">No vendas el sistema.</h2><h2 class="display-serif reveal" data-reveal="1">Vende el cambio.</h2><p class="mono reveal" data-reveal="2">persona + momento + promesa + acción</p></div><aside class="rule reveal" data-reveal="3"><span class="number">10</span><h3>segundos para entenderlo</h3></aside></div>`,
   },
   {
-    label: "Tipografía",
+    label: "Landing",
     beats: 2,
-    content: () => `<div class="content"><p class="kicker">EJEMPLO 02 · TEXTO</p><h2>El texto decide.</h2><div class="lab"><article class="lab-card"><span class="lab-label">SALIDA RÁPIDA</span><h3>Una cobertura diseñada para quienes quieren proteger lo más importante de su vida.</h3></article><article class="lab-card after reveal" data-reveal="1"><span class="lab-label">TUNEADO</span><h3>Protege el viaje que ya estás a punto de hacer.</h3><div class="range-row"><span>Ancho</span><input id="typeRange" aria-label="Cambiar ancho del título" type="range" min="200" max="430" value="310" /><output id="typeValue">310 px</output></div></article></div><p class="mono accent reveal" data-reveal="2">text-base · leading-6 · text-wrap: balance</p></div>`,
-  },
-  {
-    label: "Espacio",
-    beats: 2,
-    content: () => `<div class="content"><p class="kicker">EJEMPLO 03 · RITMO</p><h2>El espacio agrupa.</h2><div class="token-lab" id="tokenLab"><article class="token-card"><span class="demo-kicker">CUOTA POSIBLE</span><h3>$ 240.000</h3><p>al mes durante 24 meses</p><button class="demo-action quiet" type="button">Ver detalle</button></article><div class="control-block"><label class="control-row">Radio <input id="radiusRange" aria-label="Cambiar radio" type="range" min="8" max="28" value="18" /><output id="radiusValue">18 px</output></label><label class="control-row">Padding <input id="paddingRange" aria-label="Cambiar espacio interior" type="range" min="14" max="38" value="26" /><output id="paddingValue">26 px</output></label><p class="mono accent">gap-2 · gap-4 · gap-8</p></div></div></div>`,
-  },
-  {
-    label: "Movimiento",
-    beats: 2,
-    content: () => `<div class="content"><p class="kicker">EJEMPLO 04 · MOVIMIENTO</p><h2>Mueve lo que cambia algo.</h2><div class="inventory-demo"><article class="count-card"><span class="demo-kicker">BODEGA 03 · JUGOS</span><div class="count">12</div><button class="demo-action" id="countButton" type="button">Registrar 12</button><div class="confirmation" id="confirmation">✓ Registrado. Siguiente producto.</div></article><div class="micro-list"><div class="micro-item"><strong>Orientar</strong></div><div class="micro-item"><strong>Confirmar</strong></div><div class="micro-item"><strong>Revisar</strong></div><p class="mono accent reveal" data-reveal="2">duration-150 · transition-transform</p></div></div></div>`,
+    content: () => `<div class="content"><p class="kicker">EJEMPLO 01 · LA PROMESA</p><h2>El test del logo intercambiable.</h2><div class="challenge-demo demo-shell" id="landingDemo"></div></div>`,
   },
   {
     label: "Precisión",
     beats: 3,
-    content: () => `<div class="content split"><div class="copy-stack"><p class="kicker reveal" data-reveal="0">PRECISIÓN</p><h2 class="reveal" data-reveal="0">El carácter está en el detalle.</h2><p class="reveal" data-reveal="1">16 px para leer. 44 px para tocar.</p><p class="reveal" data-reveal="2">Menos de 200 ms para responder.</p><h2 class="display-serif accent reveal" data-reveal="3">Menos. Mejor.</h2></div><aside class="rule reveal" data-reveal="2"><span class="number">4</span><h3>tipografía · espacio · forma · movimiento</h3></aside></div>`,
+    content: () => `<div class="content split"><div class="copy-stack"><p class="kicker reveal" data-reveal="0">PRECISIÓN</p><h2 class="reveal" data-reveal="0">El carácter está en el detalle.</h2><p class="reveal" data-reveal="1">16 px para leer. 44 px para tocar.</p><p class="reveal" data-reveal="2">Menos de 200 ms para responder.</p><h2 class="display-serif reveal" data-reveal="3">Menos. Mejor.</h2></div><aside class="rule reveal" data-reveal="2"><span class="number">4</span><h3>contenido · jerarquía · espacio · movimiento</h3></aside></div>`,
+  },
+  {
+    label: "Transformar",
+    beats: 5,
+    content: (beat) => {
+      if (beat === 5) {
+        return `<div class="content"><p class="kicker">SLOP → HUMANO</p><h2>No agregamos features. Elegimos.</h2><div class="compare" style="margin-top:26px"><div><p class="compare-label">Salida de IA</p>${creditoCard(0)}</div><div><p class="compare-label after">Humano</p>${creditoCard(4)}</div></div></div>`;
+      }
+      const m = transformMoves[beat];
+      return `<div class="content"><p class="kicker">SLOP → HUMANO · EN VIVO</p><div class="transform">${creditoCard(beat)}<div class="tcaption"><span class="tstep">${m.step}</span><h2 class="tmove">${m.move}</h2><p class="tsub">${m.sub}</p>${m.cls ? `<code class="tclasses">${m.cls}</code>` : ""}</div></div></div>`;
+    },
+  },
+  {
+    label: "Estados",
+    beats: 1,
+    content: () => `<div class="content"><p class="kicker">CONTENIDO ANTES QUE ESTÉTICA</p><h2 class="reveal" data-reveal="0">La IA maqueta el happy path. El producto vive en sus estados.</h2><div class="states-grid"><article class="state-card"><span class="tag">Vacío</span><p>Aún no hay movimientos. Da el primer paso.</p></article><article class="state-card"><span class="tag">Cargando</span><div class="skel"></div><div class="skel" style="width:70%"></div><div class="skel" style="width:45%"></div></article><article class="state-card warn"><span class="tag">Error</span><p>No pudimos calcular la cuota. Reintenta o cambia el monto.</p></article><article class="state-card"><span class="tag">Éxito</span><p class="ok">✓ Cuota lista: $240.000 / mes.</p></article><article class="state-card"><span class="tag">Deshabilitado</span><p style="opacity:.5">Completa el monto para continuar.</p></article></div><p class="mono soft reveal" data-reveal="1" style="margin-top:24px;font-size:14px">Pixel-perfect del happy path = 20% del trabajo real.</p></div>`,
+  },
+  {
+    label: "Tipografía",
+    beats: 2,
+    content: () => `<div class="content"><p class="kicker">EJEMPLO 02 · TEXTO</p><h2>El texto decide.</h2><div class="lab"><article class="lab-card"><span class="lab-label">Salida rápida</span><h3>Una cobertura diseñada para quienes quieren proteger lo más importante de su vida.</h3></article><article class="lab-card after reveal" data-reveal="1"><span class="lab-label">Tuneado</span><h3>Protege el viaje que ya estás a punto de hacer.</h3><div class="range-row"><span>Ancho</span><input id="typeRange" aria-label="Cambiar ancho del título" type="range" min="200" max="430" value="310" /><output id="typeValue">310 px</output></div></article></div><p class="mono soft reveal" data-reveal="2" style="margin-top:22px;font-size:14px">text-base · leading-6 · text-wrap: balance</p></div>`,
+  },
+  {
+    label: "Espacio",
+    beats: 2,
+    content: () => `<div class="content"><p class="kicker">EJEMPLO 03 · RITMO</p><h2>El espacio agrupa.</h2><div class="token-lab" id="tokenLab"><article class="token-card"><span class="demo-kicker">CUOTA POSIBLE</span><h3>$ 240.000</h3><p>al mes durante 24 meses</p><button class="demo-action quiet" type="button">Ver detalle</button></article><div class="control-block"><label class="control-row">Radio <input id="radiusRange" aria-label="Cambiar radio" type="range" min="8" max="28" value="18" /><output id="radiusValue">18 px</output></label><label class="control-row">Padding <input id="paddingRange" aria-label="Cambiar espacio interior" type="range" min="14" max="38" value="26" /><output id="paddingValue">26 px</output></label><p class="mono soft" style="font-size:14px">gap-2 · gap-4 · gap-8 · más aire entre grupos que dentro</p></div></div></div>`,
+  },
+  {
+    label: "Affordances",
+    beats: 1,
+    content: () => `<div class="content"><p class="kicker">EJEMPLO 04 · AFFORDANCES + ERRORES ÚTILES</p><h2>Si parece botón, debe actuar como botón.</h2><div class="two"><div class="snippet">.button {
+  cursor: pointer;
+  transition: transform 150ms ease;
+}
+.button<span class="k">:hover</span>         { opacity: .9; }
+.button<span class="k">:active</span>        { transform: scale(.98); }
+.button<span class="k">:focus-visible</span> { outline: 2px solid; }
+.button<span class="k">:disabled</span>      { opacity: .5; cursor: not-allowed; }</div><div><div class="err-row bad"><span class="tag">❌ Genérico</span><h3>Something went wrong</h3></div><div class="err-row after" style="margin-top:14px"><span class="tag">✓ Defensive UI</span><h3>Ese correo ya está registrado. ¿Quieres iniciar sesión?</h3></div><p class="soft" style="margin-top:16px;font-size:15px">Cada error es una conversación con alguien frustrado. Di qué pasó <strong style="color:var(--ink);font-weight:600">y</strong> qué hacer.</p></div></div></div>`,
+  },
+  {
+    label: "Movimiento",
+    beats: 2,
+    content: () => `<div class="content"><p class="kicker">EJEMPLO 05 · MOVIMIENTO</p><h2>Mueve solo lo que cambia algo.</h2><div class="inventory-demo"><article class="count-card"><span class="demo-kicker">BODEGA 03 · JUGOS</span><div class="count">12</div><button class="demo-action" id="countButton" type="button">Registrar 12</button><div class="confirmation" id="confirmation">✓ Registrado. Siguiente producto.</div></article><div class="micro-list"><div class="micro-item"><strong>Orientar</strong><span>hacia dónde va la atención</span></div><div class="micro-item"><strong>Confirmar</strong><span>que algo pasó, al instante</span></div><div class="micro-item"><strong>Optimistic UI</strong><span>muestra el resultado, confirma después</span></div><p class="mono soft reveal" data-reveal="2" style="font-size:14px">duration-150 · transition-transform</p></div></div></div>`,
+  },
+  {
+    label: "Menos",
+    beats: 1,
+    content: () => `<div class="content narrow opening"><p class="kicker reveal" data-reveal="0">EL CORTE QUE DUELE</p><h1 class="reveal" data-reveal="0">Quita hasta que duela.</h1><h1 class="second display-serif reveal" data-reveal="1">Luego quita uno más.</h1><p class="reveal" data-reveal="1" style="margin-top:8px">Cada elemento compite por atención. Si todo grita, nada se escucha.</p></div>`,
   },
   {
     label: "Auditar",
@@ -82,7 +148,7 @@ const scenes = [
   },
   {
     label: "Cerrar",
-    beats: 2,
+    beats: 3,
     content: () => `<div class="content narrow opening"><p class="kicker reveal" data-reveal="0">PARA VOLVER AL EQUIPO</p><h1 class="reveal" data-reveal="0">Que se note que alguien eligió.</h1><h1 class="second display-serif reveal" data-reveal="1">Para quién.</h1><h1 class="second display-serif reveal" data-reveal="2">Qué promete.</h1><h1 class="second display-serif reveal" data-reveal="3">Cómo se siente.</h1></div>`,
   },
   {
@@ -111,7 +177,7 @@ function renderLandingDemo(element) {
   let active = "credito";
   const paint = () => {
     const data = challengeData[active];
-    element.innerHTML = `<div class="demo-top"><div class="dots"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div></div><div class="demo-body"><div class="demo-controls">${Object.entries(challengeData).map(([key, item]) => `<button class="chip" data-challenge="${key}" aria-pressed="${key === active}">${item.name}</button>`).join("")}</div><div class="compare"><div><p class="compare-label">SALIDA RÁPIDA DE IA</p><article class="demo-shell"><div class="demo-body"><span class="demo-kicker">${data.name.toUpperCase()}</span><h3 class="demo-title">${data.generic}</h3></div></article></div><div class="after-version"><p class="compare-label after">TUNEADO PARA EL MOMENTO</p><article class="demo-shell"><div class="demo-body"><span class="demo-kicker">${data.name.toUpperCase()}</span><h3 class="demo-title">${data.tuned}</h3><p class="demo-copy">${data.moment}</p><button class="demo-action" type="button">${data.action}</button></div></article></div></div></div>`;
+    element.innerHTML = `<div class="demo-top"><div class="dots"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div></div><div class="demo-body"><div class="demo-controls">${Object.entries(challengeData).map(([key, item]) => `<button class="chip" data-challenge="${key}" aria-pressed="${key === active}">${item.name}</button>`).join("")}</div><div class="compare"><div><p class="compare-label">SALIDA RÁPIDA DE IA</p><article class="demo-shell slop"><div class="demo-body"><span class="demo-kicker">${data.name.toUpperCase()}</span><h3 class="demo-title">${data.generic}</h3></div></article></div><div class="after-version"><p class="compare-label after">TUNEADO PARA EL MOMENTO</p><article class="demo-shell"><div class="demo-body"><span class="demo-kicker">${data.name.toUpperCase()}</span><h3 class="demo-title">${data.tuned}</h3><p class="demo-copy">${data.moment}</p><button class="demo-action" type="button">${data.action}</button></div></article></div></div></div>`;
     element.querySelectorAll("[data-challenge]").forEach((button) => button.addEventListener("click", () => { active = button.dataset.challenge; paint(); }));
   };
   paint();
@@ -150,7 +216,7 @@ function wireInteractions() {
 
 function render() {
   const scene = scenes[sceneIndex];
-  deck.innerHTML = `<section class="scene" data-beat="${beat}" aria-roledescription="escena" aria-label="${scene.label}"><header class="chrome"><span>Des IA izar</span><span class="stage">${String(sceneIndex + 1).padStart(2, "0")} · ${String(beat + 1).padStart(2, "0")}</span></header>${scene.content()}</section>`;
+  deck.innerHTML = `<section class="scene" data-beat="${beat}" aria-roledescription="escena" aria-label="${scene.label}"><header class="chrome"><span>Des·IA·izar</span><span class="stage">${String(sceneIndex + 1).padStart(2, "0")} · ${String(beat + 1).padStart(2, "0")}</span></header>${scene.content(beat)}</section>`;
   wireInteractions();
 }
 

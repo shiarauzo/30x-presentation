@@ -116,26 +116,50 @@ const scenes = [
     beats: 1,
     content: () => `<div class="content"><p class="part">Haz tu tarea</p><h2>Tus jueces son tus usuarios.</h2><div class="list" style="margin-top:18px"><p>Lee <span class="em">las bases y el landing</span>: ahí dice qué se premia de verdad.</p><p>Estudia al <span class="em">jurado y los mentores</span>: sus perfiles dicen qué los impresiona.</p><p>Mira los <span class="em">tracks y sponsors</span>: ahí están los problemas que quieren ver resueltos.</p></div><p class="reveal" data-reveal="1" style="margin-top:20px;color:var(--ink)">El juez tiene un contexto y un mal día, igual que tu usuario. Diséñale la demo a él.</p></div>`,
   },
-  // ===== PARTE 02 · CRITERIO / ANTI-SLOP =====
+  // ===== PARTE 02 · EL DESIGN SPRINT =====
   {
     label: "Parte 02",
     beats: 0,
-    content: () => `<div class="content"><p class="part">Parte 02</p><h1 class="section-title">De promedio a criterio</h1><div class="rule-line"></div><p class="section-sub">La IA te da la primera respuesta. Buena, y parecida a todas.</p></div>`,
+    content: () => `<div class="content"><p class="part">Parte 02</p><h1 class="section-title">El Design Sprint</h1><div class="rule-line"></div><p class="section-sub">Nació en Google Ventures para construir y validar en días, no meses.</p></div>`,
   },
   {
-    label: "Persona",
-    beats: 2,
-    content: () => `<div class="content split"><div class="copy-stack"><p class="part reveal" data-reveal="0">Persona</p><h2 class="reveal" data-reveal="0">La IA parte de un promedio.</h2><h2 class="reveal" data-reveal="1" style="font-weight:500">Tú partes de un momento.</h2><p class="reveal" data-reveal="2">¿Qué está a punto de decidir hoy?</p></div><aside class="rule reveal" data-reveal="2"><span class="number">1</span><h3>pregunta por pantalla</h3></aside></div>`,
+    label: "Seguir o pivotear",
+    beats: 1,
+    content: () => `<div class="content"><p class="part">Para qué sirve un sprint</p><h2>Te dice si seguir o pivotear — antes de gastar semanas.</h2><div class="two"><div style="border-top:2px solid var(--ink);padding-top:14px"><h3>Savioke</h3><p style="margin-top:8px">Probó un robot de hotel en un sprint. Funcionó, la gente lo amó. <span class="accent">Siguió.</span></p></div><div style="border-top:2px solid var(--line);padding-top:14px"><h3>Slack</h3><p style="margin-top:8px">Un sprint reveló que nuevos usuarios no entendían el producto. <span class="accent">Cambió el onboarding.</span></p></div></div><p class="reveal" data-reveal="1" style="margin-top:22px;color:var(--ink)">Barato equivocarte en papel. Caro equivocarte en producción.</p></div>`,
   },
   {
-    label: "Postura",
-    beats: 3,
-    content: () => `<div class="content split"><div class="copy-stack"><p class="part reveal" data-reveal="0">Postura</p><h2 class="reveal" data-reveal="0">No vendas el sistema.</h2><h2 class="reveal" data-reveal="1" style="font-weight:500">Vende el cambio.</h2><p class="reveal" data-reveal="2">Test del logo: si sirve para cualquier app, es genérico.</p></div><aside class="rule reveal" data-reveal="3"><span class="number">10</span><h3>segundos para entenderlo</h3></aside></div>`,
+    label: "RoomieMatch",
+    beats: 0,
+    content: () => `<div class="content"><p class="part">El ejemplo que seguimos</p><h1 class="section-title" style="font-size:clamp(2.4rem,6vw,4.6rem)">RoomieMatch</h1><p class="section-sub" style="max-width:52ch">Una app para que estudiantes encuentren roommate por compatibilidad real —no solo precio y ubicación— dentro de su universidad. Usuaria: <span class="accent">Ana</span>.</p></div>`,
+  },
+  {
+    label: "El sprint en 5",
+    beats: 5,
+    content: (beat) => {
+      const rows = sprintSteps.map((s, i) => `<div class="step${i <= beat ? " on" : ""}"><span class="n">${s.n}</span><div><h3>${s.h}</h3><p>${s.p}</p></div></div>`).join("");
+      return `<div class="content"><p class="part">48 horas</p><h2>El sprint, paso a paso.</h2><div class="stepper">${rows}</div></div>`;
+    },
+  },
+  {
+    label: "Fachada",
+    beats: 1,
+    content: () => `<div class="content media"><div class="copy"><p class="part">Prototype · paso 4</p><h2 class="reveal" data-reveal="0">Construye una fachada, no el edificio.</h2><p class="reveal" data-reveal="1" style="margin-top:14px">Lo mínimo para que Ana sienta que es real y te diga la verdad. Nadie prueba tu backend; prueban lo que ven.</p></div><figure class="reveal" data-reveal="0"><img src="img/estados-app.jpg" width="1024" height="682" alt="Pantalla de una app móvil usada como prototipo" loading="lazy" /></figure></div>`,
+  },
+  {
+    label: "Pirámide",
+    beats: 1,
+    content: () => `<div class="content"><p class="part">Qué construir primero</p><h2>La pirámide de features.</h2><div class="pyramid"><div class="tier core"><span class="lbl"><strong>Core</strong> · sin esto no hay demo</span></div><div class="tier"><span class="lbl">Debería tener · suma pero no es vital</span></div><div class="tier"><span class="lbl">Nice to have · si sobra tiempo</span></div><div class="tier" style="opacity:.5"><span class="lbl">El sueño · para después del hackathon</span></div></div><p class="reveal" data-reveal="1" style="margin-top:20px;color:var(--ink)">Shippea el <span class="accent">core</span>. El sueño no cabe en 48 horas.</p></div>`,
+  },
+  // ===== PARTE 03 · QUE SE ENTIENDA SOLA (craft) =====
+  {
+    label: "Parte 03",
+    beats: 0,
+    content: () => `<div class="content"><p class="part">Parte 03</p><h1 class="section-title">Que se entienda sola</h1><div class="rule-line"></div><p class="section-sub">Ya construiste algo. Ahora el detalle es lo que convence al juez.</p></div>`,
   },
   {
     label: "Precisión",
     beats: 3,
-    content: () => `<div class="content split"><div class="copy-stack"><p class="part reveal" data-reveal="0">Precisión</p><h2 class="reveal" data-reveal="0">El carácter está en el detalle.</h2><p class="reveal" data-reveal="1">16&nbsp;px para leer. 44&nbsp;px para tocar.</p><p class="reveal" data-reveal="2">Menos de 200&nbsp;ms para responder.</p><h2 class="reveal" data-reveal="3" style="font-weight:500">Menos. Mejor.</h2></div><aside class="rule reveal" data-reveal="2"><span class="number">4</span><h3>contenido · jerarquía · espacio · movimiento</h3></aside></div>`,
+    content: () => `<div class="content split"><div class="copy-stack"><p class="part reveal" data-reveal="0">La IA parte de un promedio</p><h2 class="reveal" data-reveal="0">El carácter está en el detalle.</h2><p class="reveal" data-reveal="1">16&nbsp;px para leer. 44&nbsp;px para tocar.</p><p class="reveal" data-reveal="2">Menos de 200&nbsp;ms para responder.</p><h2 class="reveal" data-reveal="3" style="font-weight:500">Menos. Mejor.</h2></div><aside class="rule reveal" data-reveal="2"><span class="number">4</span><h3>contenido · jerarquía · espacio · movimiento</h3></aside></div>`,
   },
   {
     label: "Transformar",
@@ -147,12 +171,6 @@ const scenes = [
       const m = transformMoves[beat];
       return `<div class="content"><p class="part">Slop → humano · en vivo</p><div class="transform">${appCard(beat)}<div class="tcaption"><span class="tstep">${m.step}</span><h2 class="tmove">${m.move}</h2><p class="tsub">${m.sub}</p>${m.cls ? `<code class="tclasses">${m.cls}</code>` : ""}</div></div></div>`;
     },
-  },
-  // ===== PARTE 03 · QUE SE ENTIENDA SOLA =====
-  {
-    label: "Parte 03",
-    beats: 0,
-    content: () => `<div class="content"><p class="part">Parte 03</p><h1 class="section-title">Que se entienda sola</h1><div class="rule-line"></div><p class="section-sub">El viaje de una interfaz: seis momentos que todo demo vive.</p></div>`,
   },
   {
     label: "Estados",
@@ -191,45 +209,16 @@ const scenes = [
     beats: 1,
     content: () => `<div class="content narrow opening"><p class="part reveal" data-reveal="0">El corte que duele</p><h1 class="reveal" data-reveal="0">Quita hasta que duela.</h1><h1 class="reveal" data-reveal="1" style="color:var(--faint)">Luego quita uno más.</h1><p class="reveal" data-reveal="1" style="margin-top:8px">Si todo grita, nada se escucha.</p></div>`,
   },
-  // ===== PARTE 04 · DESIGN SPRINT =====
+  {
+    label: "Auditar",
+    beats: 2,
+    content: () => `<div class="content"><p class="part">Un prompt para el equipo</p><div class="prompt"><span class="mono">AUDITORÍA DE TASTE</span><h2>Haz que la IA revise.</h2><p>“Audita momento, promesa, jerarquía, copy, espacio y movimiento. No agregues features. Devuelve tres cambios con clases de Tailwind.”</p></div><div class="checklist"><article class="check reveal" data-reveal="0"><span>MOMENTO</span><p>¿Para quién y cuándo?</p></article><article class="check reveal" data-reveal="1"><span>PROMESA</span><p>¿Se entiende sola?</p></article><article class="check reveal" data-reveal="2"><span>DETALLE</span><p>Corrige uno.</p></article></div></div>`,
+  },
+  // ===== PARTE 04 · LANZA RÁPIDO =====
   {
     label: "Parte 04",
     beats: 0,
-    content: () => `<div class="content"><p class="part">Parte 04</p><h1 class="section-title">El Design Sprint</h1><div class="rule-line"></div><p class="section-sub">Nació en Google Ventures para construir y validar en días, no meses.</p></div>`,
-  },
-  {
-    label: "Seguir o pivotear",
-    beats: 1,
-    content: () => `<div class="content"><p class="part">Para qué sirve un sprint</p><h2>Te dice si seguir o pivotear — antes de gastar semanas.</h2><div class="two"><div style="border-top:2px solid var(--ink);padding-top:14px"><h3>Savioke</h3><p style="margin-top:8px">Probó un robot de hotel en un sprint. Funcionó, la gente lo amó. <span class="accent">Siguió.</span></p></div><div style="border-top:2px solid var(--line);padding-top:14px"><h3>Slack</h3><p style="margin-top:8px">Un sprint reveló que nuevos usuarios no entendían el producto. <span class="accent">Cambió el onboarding.</span></p></div></div><p class="reveal" data-reveal="1" style="margin-top:22px;color:var(--ink)">Barato equivocarte en papel. Caro equivocarte en producción.</p></div>`,
-  },
-  {
-    label: "RoomieMatch",
-    beats: 0,
-    content: () => `<div class="content"><p class="part">El ejemplo que seguimos</p><h1 class="section-title" style="font-size:clamp(2.4rem,6vw,4.6rem)">RoomieMatch</h1><p class="section-sub" style="max-width:52ch">Una app para que estudiantes encuentren roommate por compatibilidad real —no solo precio y ubicación— dentro de su universidad. Usuaria: <span class="accent">Ana</span>.</p></div>`,
-  },
-  {
-    label: "El sprint en 5",
-    beats: 5,
-    content: (beat) => {
-      const rows = sprintSteps.map((s, i) => `<div class="step${i <= beat ? " on" : ""}"><span class="n">${s.n}</span><div><h3>${s.h}</h3><p>${s.p}</p></div></div>`).join("");
-      return `<div class="content"><p class="part">48 horas</p><h2>El sprint, paso a paso.</h2><div class="stepper">${rows}</div></div>`;
-    },
-  },
-  {
-    label: "Fachada",
-    beats: 1,
-    content: () => `<div class="content media"><div class="copy"><p class="part">Prototype · paso 4</p><h2 class="reveal" data-reveal="0">Construye una fachada, no el edificio.</h2><p class="reveal" data-reveal="1" style="margin-top:14px">Lo mínimo para que Ana sienta que es real y te diga la verdad. Nadie prueba tu backend; prueban lo que ven.</p></div><figure class="reveal" data-reveal="0"><img src="img/estados-app.jpg" width="1024" height="682" alt="Pantalla de una app móvil usada como prototipo" loading="lazy" /></figure></div>`,
-  },
-  {
-    label: "Pirámide",
-    beats: 1,
-    content: () => `<div class="content"><p class="part">Qué construir primero</p><h2>La pirámide de features.</h2><div class="pyramid"><div class="tier core"><span class="lbl"><strong>Core</strong> · sin esto no hay demo</span></div><div class="tier"><span class="lbl">Debería tener · suma pero no es vital</span></div><div class="tier"><span class="lbl">Nice to have · si sobra tiempo</span></div><div class="tier" style="opacity:.5"><span class="lbl">El sueño · para después del hackathon</span></div></div><p class="reveal" data-reveal="1" style="margin-top:20px;color:var(--ink)">Shippea el <span class="accent">core</span>. El sueño no cabe en 48 horas.</p></div>`,
-  },
-  // ===== PARTE 05 · LANZA RÁPIDO =====
-  {
-    label: "Parte 05",
-    beats: 0,
-    content: () => `<div class="content"><p class="part">Parte 05</p><h1 class="section-title">Lanza rápido</h1><div class="rule-line"></div><p class="section-sub">Hecho, mostrado y entendido — hoy.</p></div>`,
+    content: () => `<div class="content"><p class="part">Parte 04</p><h1 class="section-title">Lanza rápido</h1><div class="rule-line"></div><p class="section-sub">Hecho, mostrado y entendido — hoy.</p></div>`,
   },
   {
     label: "Hecho > perfecto",
@@ -245,11 +234,6 @@ const scenes = [
     label: "Errores reales",
     beats: 1,
     content: () => `<div class="content"><p class="part">Aprende de los caros</p><h2>Errores reales de hackathon.</h2><div class="list reveal" data-reveal="1" style="margin-top:18px"><p>Construir <span class="em">3 días sin mostrarle a nadie</span> — y descubrir tarde que no se entendía.</p><p>Enamorarse del <span class="em">feature difícil</span> y no terminar el core.</p><p>Pulir el <span class="em">logo</span> antes de que la demo funcione.</p><p>Llegar al pitch <span class="em">sin haber ensayado</span> la demo en vivo.</p></div></div>`,
-  },
-  {
-    label: "Auditar",
-    beats: 2,
-    content: () => `<div class="content"><p class="part">Un prompt para el equipo</p><div class="prompt"><span class="mono">AUDITORÍA DE TASTE</span><h2>Haz que la IA revise.</h2><p>“Audita momento, promesa, jerarquía, copy, espacio y movimiento. No agregues features. Devuelve tres cambios con clases de Tailwind.”</p></div><div class="checklist"><article class="check reveal" data-reveal="0"><span>PERSONA</span><p>Define el momento.</p></article><article class="check reveal" data-reveal="1"><span>POSTURA</span><p>Reescribe la promesa.</p></article><article class="check reveal" data-reveal="2"><span>PRECISIÓN</span><p>Corrige un detalle.</p></article></div></div>`,
   },
   {
     label: "Herramientas",

@@ -42,7 +42,7 @@ const scenes = [
   {
     label: "Portada",
     beats: 1,
-    content: () => `<div class="content narrow opening"><p class="part reveal" data-reveal="0">Charla · Hackathon</p><h1 class="reveal" data-reveal="0">Piensa en producto.</h1><h1 class="reveal" data-reveal="1">Shippea con criterio.</h1></div>`,
+    content: () => `<div class="content narrow opening"><p class="part reveal" data-reveal="0">Charla · Hackathon</p><h1 class="reveal" data-reveal="0"><span style="color:var(--faint)">des-</span>IA<span style="color:var(--faint)">-izar</span></h1><h1 class="reveal" data-reveal="1">productos digitales</h1></div>`,
   },
   {
     label: "Pied Piper",

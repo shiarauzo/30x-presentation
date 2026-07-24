@@ -63,23 +63,18 @@ const scenes = [
   {
     label: "Campana",
     beats: 1,
-    content: () => `<div class="content"><p class="part">La IA aprende de todo internet</p><h2>Y te devuelve el promedio.</h2><div class="bell"><svg viewBox="0 0 760 300" role="img" aria-label="Campana de Gauss: la mayoría de diseños generados por IA caen en el promedio genérico; el buen diseño es raro, en los extremos"><line x1="40" y1="248" x2="720" y2="248" stroke="#232329" stroke-width="1" /><path d="M40,248 C210,248 300,80 380,80 C460,80 550,248 720,248 Z" fill="#ffffff" fill-opacity="0.05" /><path d="M40,248 C210,248 300,80 380,80 C460,80 550,248 720,248" fill="none" stroke="#9a9aa3" stroke-width="2" /><line x1="380" y1="92" x2="380" y2="248" stroke="#6f6f79" stroke-width="1" stroke-dasharray="3 4" /><text x="380" y="124" text-anchor="middle" fill="#f4f4f5" font-size="16" font-family="Geist, sans-serif">la mayoría de diseños de IA</text><text x="380" y="272" text-anchor="middle" fill="#9a9aa3" font-size="12" letter-spacing="1.5" font-family="Geist Mono, monospace">EL PROMEDIO · LO QUE YA ESTÁ EN INTERNET</text><circle cx="666" cy="232" r="5" fill="#f4f4f5" /><text x="666" y="214" text-anchor="middle" fill="#f4f4f5" font-size="14" font-family="Geist, sans-serif">criterio</text></svg></div><p class="reveal" data-reveal="1" style="margin-top:8px;max-width:60ch">La mayoría de lo que genera es lo que ya viste mil veces. El promedio no es buen diseño.</p></div>`,
+    content: () => `<div class="content"><p class="part">La IA aprende de todo internet</p><h2>Y te devuelve el promedio.</h2><div class="bell"><svg viewBox="0 0 760 286" role="img" aria-label="Campana de Gauss: la mayoría de diseños generados por IA caen en el promedio genérico; el buen diseño es raro, en los extremos"><line x1="40" y1="248" x2="720" y2="248" stroke="#232329" stroke-width="1" /><path d="M40,248 C210,248 300,80 380,80 C460,80 550,248 720,248 Z" fill="#ffffff" fill-opacity="0.05" /><path d="M40,248 C210,248 300,80 380,80 C460,80 550,248 720,248" fill="none" stroke="#9a9aa3" stroke-width="2" /><line x1="380" y1="92" x2="380" y2="248" stroke="#6f6f79" stroke-width="1" stroke-dasharray="3 4" /><text x="380" y="124" text-anchor="middle" fill="#f4f4f5" font-size="16" font-family="Geist, sans-serif">la mayoría de diseños de IA</text><text x="380" y="272" text-anchor="middle" fill="#9a9aa3" font-size="12" letter-spacing="1.5" font-family="Geist Mono, monospace">EL PROMEDIO · LO QUE YA ESTÁ EN INTERNET</text><circle cx="666" cy="232" r="5" fill="#f4f4f5" /><text x="666" y="214" text-anchor="middle" fill="#f4f4f5" font-size="14" font-family="Geist, sans-serif">criterio</text></svg></div><p class="reveal" data-reveal="1" style="margin-top:8px;max-width:60ch">La mayoría de lo que genera es lo que ya viste mil veces. El promedio no es buen diseño.</p></div>`,
   },
   {
     label: "Toque humano",
     beats: 1,
-    content: () => `<div class="content narrow opening"><p class="part reveal" data-reveal="0">Por eso</p><h1 class="reveal" data-reveal="0">El toque humano lo pones tú.</h1><p class="reveal" data-reveal="1" style="margin-top:16px">Y no se improvisa: <span class="accent">investiga a tu usuario</span> y <span class="accent">diseña con intención</span>.</p></div>`,
-  },
-  {
-    label: "Shippear",
-    beats: 0,
-    content: () => `<div class="content"><div class="wiki"><div><h2>Shippear</h2><p class="from">De Wikipedia, la enciclopedia libre</p><p><strong>Shippear</strong> (del inglés <em>to ship</em>, «enviar») es el <span class="link">arte</span> de construir algo y <span class="link">mostrárselo al mundo</span>. No basta con crearlo: hay que <span class="link">lanzarlo</span> para que exista.</p><p>Lo contrario es dejar tu proyecto en el laptop, donde nadie lo ve.</p></div><aside><div class="head">Shippear</div><div class="body"><div><strong>Tipo</strong> · arte de construir</div><div><strong>Sinónimos</strong> · lanzar, publicar</div><div><strong>Opuesto</strong> · quedarse en el laptop</div><div><strong>En hackathon</strong> · obligatorio</div></div></aside></div></div>`,
+    content: () => `<div class="content narrow opening"><p class="part reveal" data-reveal="0">Por eso</p><h1 class="reveal" data-reveal="0">El toque humano lo pones tú.</h1><p class="reveal" data-reveal="1" style="margin-top:16px"><span class="accent">Investiga</span> a tu usuario, <span class="accent">encuentra su problema</span> real y <span class="accent">diseña</span> para lo que necesita.</p></div>`,
   },
   // ===== PARTE 01 · PIENSA EN PRODUCTO =====
   {
     label: "Parte 01",
     beats: 0,
-    content: () => `<div class="content"><p class="part">Parte 01</p><h1 class="section-title">Piensa en producto</h1><div class="rule-line"></div><p class="section-sub">Antes de tocar el teclado.</p></div>`,
+    content: () => `<div class="content"><p class="part">Parte 01</p><h1 class="section-title">Piensa en producto</h1><p class="section-sub">Antes de tocar el teclado.</p></div>`,
   },
   {
     label: "4 preguntas",
@@ -89,7 +84,7 @@ const scenes = [
   {
     label: "Problema real",
     beats: 1,
-    content: () => `<div class="content narrow" style="text-align:center"><p class="quote" style="margin:0 auto;color:var(--faint)">No estás construyendo features.</p><div class="rule-line" style="margin:24px auto"></div><p class="quote reveal" data-reveal="1" style="margin:0 auto">Estás resolviendo <span class="accent">un problema</span>.</p></div>`,
+    content: () => `<div class="content narrow" style="text-align:center"><p class="quote" style="margin:0 auto;color:var(--faint)">No estás construyendo features.</p><p class="quote reveal" data-reveal="1" style="margin:18px auto 0">Estás resolviendo <span class="accent">un problema</span>.</p></div>`,
   },
   {
     label: "Usuario",
@@ -120,7 +115,7 @@ const scenes = [
   {
     label: "Parte 02",
     beats: 0,
-    content: () => `<div class="content"><p class="part">Parte 02</p><h1 class="section-title">El Design Sprint</h1><div class="rule-line"></div><p class="section-sub">Nació en Google Ventures para construir y validar en días, no meses.</p></div>`,
+    content: () => `<div class="content"><p class="part">Parte 02</p><h1 class="section-title">El Design Sprint</h1><p class="section-sub">Nació en Google Ventures para construir y validar en días, no meses.</p></div>`,
   },
   {
     label: "Seguir o pivotear",
@@ -154,7 +149,7 @@ const scenes = [
   {
     label: "Parte 03",
     beats: 0,
-    content: () => `<div class="content"><p class="part">Parte 03</p><h1 class="section-title">Que se entienda sola</h1><div class="rule-line"></div><p class="section-sub">Ya construiste algo. Ahora el detalle es lo que convence al juez.</p></div>`,
+    content: () => `<div class="content"><p class="part">Parte 03</p><h1 class="section-title">Que se entienda sola</h1><p class="section-sub">Ya construiste algo. Ahora el detalle es lo que convence al juez.</p></div>`,
   },
   {
     label: "Precisión",
@@ -218,7 +213,7 @@ const scenes = [
   {
     label: "Parte 04",
     beats: 0,
-    content: () => `<div class="content"><p class="part">Parte 04</p><h1 class="section-title">Lanza rápido</h1><div class="rule-line"></div><p class="section-sub">Hecho, mostrado y entendido — hoy.</p></div>`,
+    content: () => `<div class="content"><p class="part">Parte 04</p><h1 class="section-title">Lanza rápido</h1><p class="section-sub">Hecho, mostrado y entendido — hoy.</p></div>`,
   },
   {
     label: "Hecho > perfecto",

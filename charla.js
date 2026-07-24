@@ -79,12 +79,7 @@ const scenes = [
   {
     label: "4 preguntas",
     beats: 1,
-    content: () => `<div class="content"><p class="part">Antes de tocar el teclado</p><h2>Pensar en producto es responder cuatro preguntas.</h2><div class="list num" style="margin-top:22px"><p><span class="em">Para quién</span> construyes — una persona concreta, no «todos».</p><p><span class="em">Qué problema</span> le resuelves — el dolor real, no tu solución.</p><p><span class="em">Por qué tú</span> — mejor que lo que ya usa hoy.</p><p><span class="em">Qué es lo mínimo</span> para probar que funciona.</p></div></div>`,
-  },
-  {
-    label: "Problema real",
-    beats: 1,
-    content: () => `<div class="content narrow" style="text-align:center"><p class="quote" style="margin:0 auto;color:var(--faint)">No estás construyendo features.</p><p class="quote reveal" data-reveal="1" style="margin:18px auto 0">Estás resolviendo <span class="accent">un problema</span>.</p></div>`,
+    content: () => `<div class="content"><p class="part">Antes de tocar el teclado</p><h2>Pensar en producto es responder cuatro preguntas.</h2><div class="qgrid"><article class="q"><span class="qn">01</span><h3>Para quién</h3><p>Una persona concreta, no «todos».</p></article><article class="q"><span class="qn">02</span><h3>Qué problema</h3><p>El dolor real, no tu solución.</p></article><article class="q"><span class="qn">03</span><h3>Por qué tú</h3><p>Mejor que lo que ya usa hoy.</p></article><article class="q"><span class="qn">04</span><h3>Qué es lo mínimo</h3><p>Para probar que funciona.</p></article></div></div>`,
   },
   {
     label: "Usuario",
